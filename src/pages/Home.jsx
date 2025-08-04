@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
 const Home = () => {
   const [rooms, setRooms] = useState([]);
   const [search, setSearch] = useState('');
@@ -46,10 +48,10 @@ const Home = () => {
       const timestamp = Date.now();
       const finalQueryString = queryString ? `${queryString}&_t=${timestamp}` : `?_t=${timestamp}`;
   
-      console.log('Final URL:', `http://localhost:5000/api/rooms${finalQueryString}`);
+      console.log('Final URL:', `${API_BASE_URL}/api/rooms${finalQueryString}`);
       console.log('=== ABOUT TO MAKE REQUEST ===');
   
-      const res = await axios.get(`http://localhost:5000/api/rooms${finalQueryString}`);
+      const res = await axios.get(`${API_BASE_URL}/api/rooms${finalQueryString}`);
       console.log('Response received:', res.data);
       setRooms(res.data);
     } catch (err) {
@@ -68,9 +70,9 @@ const Home = () => {
         capacity: Number(form.capacity)
       };
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/rooms/${editingId}`, payload);
+        await axios.put(`${API_BASE_URL}/api/rooms/${editingId}`, payload);
       } else {
-        await axios.post('http://localhost:5000/api/rooms', payload);
+        await axios.post(`${API_BASE_URL}/api/rooms`, payload);
       }
       setForm({ name: '', type: '', price: '', capacity: '' });
       setEditingId(null);
@@ -84,7 +86,7 @@ const Home = () => {
   // ✅ Delete room
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/rooms/${id}`);
+      await axios.delete(`${API_BASE_URL}/api/rooms/${id}`);
       fetchRooms();
     } catch (err) {
       console.error('Delete failed:', err);
