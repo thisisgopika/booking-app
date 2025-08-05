@@ -1,6 +1,10 @@
 # 🏨 Hotel Room Booking App
 
-A full-stack web application for managing hotel room bookings with real-time search and filtering capabilities.
+A modern, full-stack web application for managing hotel room bookings with real-time search and filtering capabilities. Built with React frontend and Node.js backend, featuring a complete CRUD interface for room management.
+
+## 🌟 Live Demo
+- **Frontend**: [https://your-app.vercel.app](https://your-app.vercel.app)
+- **Backend API**: [https://your-app.railway.app](https://your-app.railway.app)
 
 ## ✨ Features
 
@@ -120,25 +124,37 @@ The frontend will run on `http://localhost:3000`
 
 ## 🚀 Deployment
 
-### Frontend Deployment (Vercel/Netlify)
-1. Build the project: `npm run build`
-2. Deploy the `build` folder to your preferred platform
+### Live Demo
+- **Frontend**: [https://your-app.vercel.app](https://your-app.vercel.app)
+- **Backend API**: [https://your-app.railway.app](https://your-app.railway.app)
 
-### Backend Deployment (Railway/Render)
-1. Set environment variables in your deployment platform
+### Frontend Deployment (Vercel)
+1. Build the project: `npm run build`
+2. Deploy to Vercel with environment variable: `REACT_APP_API_URL=https://your-backend-url.railway.app`
+
+### Backend Deployment (Railway)
+1. Set environment variables in Railway:
+   - `MONGO_URL`: Your MongoDB Atlas connection string
+   - `PORT`: 5000
 2. Deploy the `server` folder
 3. Update frontend API URLs to point to your deployed backend
+
+### Environment Variables
+- **Frontend**: `REACT_APP_API_URL=https://your-backend-url.railway.app`
+- **Backend**: `MONGO_URL=mongodb+srv://username:password@cluster.mongodb.net/database`
 
 ## 📸 Screenshots
 
 ### Main Interface
-![Main Interface](screenshots/main-interface.png)
+![Main Interface](https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=Hotel+Room+Booking+App)
 
 ### Search Functionality
-![Search Functionality](screenshots/search-functionality.png)
+![Search Functionality](https://via.placeholder.com/800x400/50C878/FFFFFF?text=Search+and+Filter+Rooms)
 
 ### Add/Edit Room Form
-![Add/Edit Room Form](screenshots/add-edit-form.png)
+![Add/Edit Room Form](https://via.placeholder.com/800x400/FF6B35/FFFFFF?text=Add+Edit+Room+Form)
+
+> **Note:** Screenshots are placeholders. Add actual screenshots of your application after deployment.
 
 ## 🐛 Troubleshooting
 
@@ -184,6 +200,16 @@ This project is licensed under the ISC License.
 
 **Your Name**
 - GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourusername)
+- Portfolio: [Your Portfolio](https://your-portfolio.com)
+
+## 📊 Project Status
+- ✅ Frontend: React with modern hooks and state management
+- ✅ Backend: Node.js/Express with MongoDB
+- ✅ Database: MongoDB Atlas cloud database
+- ✅ Authentication: JWT-based user authentication
+- ✅ Deployment: Vercel (Frontend) + Railway (Backend)
+- ✅ Features: Complete CRUD operations with search and filtering
 
 ## 🙏 Acknowledgments
 
